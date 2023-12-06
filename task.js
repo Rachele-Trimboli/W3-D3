@@ -15,3 +15,6 @@ form.addEventListener("submit", function () {
   const listSection = document.getElementById("listaTask");
   listSection.appendChild(list);
 });
+
+// mi trovo i li per renderli cliccabili
+const li = document.getElementsByTagName("li");
