@@ -7,14 +7,20 @@ form.addEventListener("submit", function () {
   const task = document.getElementById("newTask");
   const list = document.createElement("ul");
   list.innerHTML = `<ul>
-  <li>${task.value}</li>
-  <button>Delete</button>
+  <li id="item" class>${task.value}</li>
+  <button id="delete">Delete</button>
+  
   </ul>
   `;
 
   const listSection = document.getElementById("listaTask");
   listSection.appendChild(list);
-});
 
-// mi trovo i li per renderli cliccabili
-const li = document.getElementsByTagName("li");
+  const li = document.getElementById("item");
+  li.addEventListener("click", function () {
+    li.style.textDecoration = "line-through";
+  });
+
+
+
+
